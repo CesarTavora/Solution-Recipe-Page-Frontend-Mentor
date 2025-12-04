@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --stone-white: #ffe7d1;
+  --title: #854632;
+  --preparation: #7b284f;
+}
+
+@font-face {
+  font-family: "outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "young-serif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--stone-white);
+  font-family: "outfit", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.recipe {
+  background-color: var(--white);
+  max-width: 740px;
+  margin: 3rem 1rem;
+  padding: 2rem;
+  border-radius: 24px;
+}
+
+.recipe-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.recipe-title {
+  font-family: "young-serif", serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.recipe-section-title {
+  font-family: "young-serif", serif;
+  font-weight: 400;
+  color: var(--title);
+  margin-bottom: 1rem;
+}
+
+.recipe-description {
+  margin-bottom: 2.5rem;
+}
+
+.recipe-subtitle {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--preparation);
+  margin-bottom: 0.5rem;
+}
+
+.recipe-preparation {
+  background-color: #9b1c5713;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.recipe-list {
+  padding-left: 1rem;
+}
+
+.recipe-list li {
+  padding: 0.5rem 0;
+  list-style-position: inside;
+}
+
+.recipe-preparation .recipe-list li::marker {
+  color: var(--preparation);
+}
+
+.recipe-ingredients,
+.recipe-instructions {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.recipe-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+.recipe-table th,
+.recipe-table td {
+  padding: 0.75rem 0;
+  text-align: left;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.recipe-table th {
+  font-weight: 400;
+}
+
+.recipe-table td {
+  color: var(--title);
+  font-weight: 700;
+}
+
+.recipe-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.recipe-footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  .recipe {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .recipe-image {
+    border-radius: 0;
+  }
+
+  .recipe-intro,
+  .recipe-preparation,
+  .recipe-ingredients,
+  .recipe-instructions,
+  .recipe-nutrition {
+    padding: 1.5rem;
+  }
+}
